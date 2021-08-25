@@ -108,7 +108,7 @@ if __name__ == '__main__':
     start_date = start_date.strftime('%d %b, %Y')
 
     symbol = 'MATICUSDT'
-    candle_time = '1m'
+    candle_time = '15m'
 
     length_reg = 26
 
@@ -118,8 +118,8 @@ if __name__ == '__main__':
 
     times, opens, highs, lows, closes = pydata.candle_values()
     reg_close = pydata.regression_values()
-    """ pyChart.plot(symbol, candle_time, 'candle',
-                 times, closes, opens, highs, lows) """
+    pyChart.plot(symbol, candle_time, 'candle',
+                 times, closes, opens, highs, lows)
 
     #print(len(closes), len(reg_close))
-    pyChart.plot(symbol, candle_time, 'lr', times, closes, reg_close=reg_close)
+    #pyChart.plot(symbol, candle_time, 'lr', times, closes, reg_close=reg_close)
